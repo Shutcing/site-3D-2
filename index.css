@@ -1,0 +1,88 @@
+/*-------ОБНУЛЕНИЕ------------------------------*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: black;
+  font-family: Limelight;
+  color: rgba(0, 128, 142, 1);
+}
+
+/*-------------------------------------------------------------*/
+body {
+  background-color: black;
+}
+.layers {
+  perspective: 1000px;
+  overflow: hidden;
+}
+.layers__container {
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  min-height: 500px;
+  will-change: transform;
+  transition: transform var(--transition);
+}
+/*--------LAYERS------------------------------------------------------*/
+.section-item {
+  position: absolute;
+  inset: -5vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-1 {
+  transform: translateZ(-700px) scale(1.8);
+}
+.section-2 {
+  transform: translateZ(-400px);
+}
+.section-3 {
+  transform: translateZ(-300px);
+}
+.section-4 {
+  transform: translateZ(-100px);
+}
+.section-5 {
+  transform: translateZ(-50px) scale(1.1);
+}
+
+.hero-section {
+  line-height: 1.35em;
+  letter-spacing: 5%;
+  font-size: 80px;
+}
+.hero-section span {
+  display: block;
+}
